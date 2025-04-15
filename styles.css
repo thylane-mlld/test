@@ -1,0 +1,502 @@
+/* Réinitialisation des styles */
+/* Réinitialisation des styles globaux pour assurer une mise en page cohérente sur tous les navigateurs */
+* {
+  margin: 0; /* Supprime toutes les marges par défaut des éléments */
+  padding: 0; /* Supprime tous les espacements internes par défaut des éléments */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur et la hauteur de l'élément */
+  
+}
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.fpr {
+  margin-top: 500px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+/* Styles de base pour le corps de la page */
+body {
+  font-family: Arial, sans-serif; /* Définit la police principale avec une alternative sans-serif */
+  line-height: 1.6; /* Définit l'espacement entre les lignes pour améliorer la lisibilité */
+  color: #333; /* Définit la couleur du texte en gris foncé */
+}
+
+/* === En-tête et navigation === */
+header {
+  background-color: #232F3E; /* Définit la couleur de fond de l'en-tête (bleu foncé/gris) */
+  color: #fff; /* Définit la couleur du texte en blanc */
+  padding: 1rem; /* Ajoute un espace intérieur de 1rem autour du contenu */
+}
+
+/* Barre de navigation */
+nav {
+  display: flex; /* Utilise Flexbox pour organiser les éléments */
+  justify-content: space-between; /* Espacement entre le logo et la liste des liens */
+  align-items: center; /* Centre verticalement les éléments */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+/* Style du logo dans la navigation */
+.logo a {
+  color: #fff; /* Texte blanc */
+  font-size: 1.5rem; /* Agrandit la taille du texte */
+  text-decoration: none; /* Supprime le soulignement du lien */
+  font-weight: bold; /* Rend le texte en gras */
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+  list-style: none; /* Supprime les puces des listes */
+  display: flex; /* Utilise Flexbox pour afficher les liens horizontalement */
+}
+
+/* Espacement entre les éléments de la liste */
+.nav-links li {
+  margin-left: 1.5rem; /* Ajoute un espace à gauche pour séparer les liens */
+}
+
+/* Style des liens de navigation */
+.nav-links a {
+  color: #fff; /* Texte blanc */
+  text-decoration: none; /* Supprime le soulignement */
+  transition: color 0.3s; /* Ajoute une transition fluide pour le changement de couleur */
+}
+
+/* Effet au survol et pour le lien actif */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #FF9900; /* Change la couleur en orange au survol ou si actif */
+}
+
+/* === Champ de recherche === */
+.search {
+  display: flex; /* Utilise Flexbox pour organiser les éléments horizontalement */
+}
+
+/* Style du champ texte dans la barre de recherche */
+.search input[type="text"] {
+  padding: 0.5rem; /* Ajoute un espace intérieur */
+  border: none; /* Supprime la bordure */
+  border-radius: 4px 0 0 4px; /* Arrondit uniquement les coins gauches */
+}
+
+/* Style du bouton de recherche */
+.search button {
+  padding: 0.5rem; /* Ajoute un espace intérieur */
+  border: none; /* Supprime la bordure */
+  background-color: #FF9900; /* Fond orange */
+  color: #fff; /* Texte blanc */
+  border-radius: 0 4px 4px 0; /* Arrondit uniquement les coins droits */
+  cursor: pointer; /* Change le curseur en "main" pour indiquer qu’il est cliquable */
+}
+
+/* Effet au survol du bouton */
+.search button:hover {
+  background-color: #e68a00; /* Assombrit l’orange pour un effet interactif */
+}
+
+/* === Section Héros (bannière principale) === */
+.hero {
+  background: url('img/hero-jewelry.jpg') no-repeat center center/cover; 
+  /* Définit une image de fond en mode "couverture", centrée sans répétition */
+  color: #fff; /* Texte blanc */
+  padding: 4rem 2rem; /* Ajoute un espace intérieur pour aérer le contenu */
+  text-align: center; /* Centre le texte */
+}
+
+/* Style du titre dans la section héros */
+.hero h1 {
+  font-size: 2.5rem; /* Définit une grande taille de police */
+  margin-bottom: 1rem; /* Ajoute un espacement sous le titre */
+  color: black; /* Définit la couleur du texte en noir */
+}
+
+/* Style du paragraphe dans la section héros */
+.hero p {
+  font-size: 1.2rem; /* Définit une taille de police moyenne */
+  margin-bottom: 2rem; /* Ajoute un espace sous le paragraphe */
+  color: black; /* Définit la couleur du texte en noir */
+}
+
+/* === Boutons génériques === */
+.btn {
+  display: inline-block; /* Permet au bouton d’être dimensionné correctement */
+  background-color: #FF9900; /* Définit un fond orange */
+  color: #fff; /* Texte blanc */
+  padding: 0.75rem 1.5rem; /* Ajoute un espace intérieur */
+  text-decoration: none; /* Supprime le soulignement */
+  border-radius: 4px; /* Arrondit les bords */
+  transition: background-color 0.3s; /* Ajoute une animation fluide sur le changement de couleur */
+}
+/* Effet au survol des boutons */
+.btn:hover {
+  background-color: #e68a00; /* Change la couleur du bouton en orange plus foncé au survol */
+}
+
+/* === Sections principales === */
+.featured-products,
+.products-list,
+.contact-form,
+.about-us {
+  padding: 2rem; /* Ajoute un espace intérieur de 2rem pour aérer le contenu */
+  height: 470px; /* Définit une hauteur fixe pour ces sections */
+}
+
+/* === Bouton du panier === */
+.cart {
+  background-color: #ff9800; /* Définit un fond orange */
+  padding: 10px 15px; /* Ajoute un espace intérieur */
+  border-radius: 5px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Change le curseur en "main" pour indiquer qu’il est cliquable */
+  text-decoration: none; /* Supprime le soulignement s’il s’agit d’un lien */
+}
+
+/* Effet au survol du bouton panier */
+.cart:hover {
+  background-color: #e68900; /* Change la couleur du bouton en orange plus foncé au survol */
+}
+
+/* === Titres des sections === */
+.featured-products h2,
+.products-list h1,
+.contact-form h1,
+.about-us h1 {
+  text-align: center; /* Centre le texte des titres */
+  margin-bottom: 2rem; /* Ajoute un espace sous le titre */
+}
+
+/* === Grille des produits === */
+.products-grid {
+  display: grid; /* Utilise Grid Layout pour organiser les produits */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  /* Crée un nombre de colonnes flexible, chaque colonne ayant une largeur minimale de 250px */
+  gap: 2rem; /* Ajoute un espace entre les éléments de la grille */
+}
+
+/* === Cartes des produits === */
+.product {
+  background-color: #f4f4f4; /* Fond gris clair */
+  padding: 1rem; /* Ajoute un espace intérieur */
+  text-align: center; /* Centre le texte */
+  border-radius: 4px; /* Arrondit les bords */
+  transition: transform 0.3s; /* Ajoute un effet de transition fluide sur la transformation */
+}
+
+/* Effet au survol d'un produit */
+.product:hover {
+  transform: translateY(-5px); /* Déplace légèrement la carte du produit vers le haut au survol */
+}
+
+/* Image du produit */
+.product img {
+  max-width: 100%; /* L'image ne dépassera pas la largeur du conteneur */
+  height: auto; /* Conserve le ratio de l'image */
+  border-bottom: 1px solid #ddd; /* Ajoute une bordure en bas pour séparer l’image du texte */
+  margin-bottom: 1rem; /* Ajoute un espace sous l’image */
+}
+
+/* === Détails du produit === */
+.product-details {
+  display: flex; /* Utilise Flexbox pour organiser les détails du produit */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l’espace est insuffisant */
+  padding: 2rem; /* Ajoute un espace intérieur */
+  height: 430px; /* Définit une hauteur fixe pour cette section */
+}
+
+/* Organisation de l'image et des informations du produit */
+.product-image,
+.product-info {
+  flex: 1; /* Chaque élément prend une part égale de l’espace disponible */
+  padding: 1rem; /* Ajoute un espace intérieur */
+}
+
+/* Image dans les détails du produit */
+.product-image img {
+  width: 100%; /* L'image occupe toute la largeur de son conteneur */
+  border: 1px solid #ddd; /* Ajoute une bordure autour de l’image */
+  border-radius: 4px; /* Arrondit les bords */
+}
+
+/* Titre du produit */
+.product-info h1 {
+  margin-bottom: 1rem; /* Ajoute un espace sous le titre */
+}
+
+/* Style du prix */
+.price {
+  font-size: 1.5rem; /* Agrandit la taille du texte */
+  color: #FF9900; /* Applique une couleur orange pour mettre en valeur le prix */
+  margin-bottom: 1rem; /* Ajoute un espace sous le prix */
+}
+
+/* Style de la description */
+.description {
+  margin-bottom: 1.5rem; /* Ajoute un espace sous la description */
+}
+
+/* === Page À propos === */
+.about-us {
+  max-width: 800px; /* Limite la largeur du contenu pour une meilleure lisibilité */
+  margin: auto; /* Centre la section horizontalement */
+  line-height: 1.6; /* Ajoute un espacement entre les lignes pour améliorer la lecture */
+  padding: 2rem; /* Ajoute un espace intérieur */
+}
+/* === Page À propos === */
+
+/* Style du titre de la section "À propos" */
+.about-us h1 {
+  text-align: center; /* Centre le texte */
+  margin-bottom: 1.5rem; /* Ajoute un espace sous le titre */
+  font-size: 2rem; /* Définit une taille de police moyenne */
+  color: #232F3E; /* Définit la couleur du texte en bleu foncé */
+}
+
+/* Style des paragraphes de la section "À propos" */
+.about-us p {
+  margin-bottom: 1rem; /* Ajoute un espace sous chaque paragraphe */
+  text-align: justify; /* Justifie le texte pour un alignement propre */
+  color: #333; /* Définit la couleur du texte en gris foncé */
+}
+
+/* === Formulaire de contact === */
+
+/* Conteneur du formulaire */
+.contact-form form {
+  max-width: 600px; /* Limite la largeur du formulaire à 600px */
+  margin: auto; /* Centre le formulaire horizontalement */
+  display: flex; /* Utilise Flexbox pour organiser les éléments */
+  flex-direction: column; /* Aligne les éléments en colonne */
+}
+
+/* Espacement pour les labels */
+.contact-form label {
+  margin-top: 1rem; /* Ajoute un espace avant chaque label */
+}
+
+/* Style des champs de saisie et de la zone de texte */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem; /* Ajoute un espace intérieur pour le confort d’écriture */
+  border: 1px solid #ddd; /* Ajoute une bordure grise claire */
+  border-radius: 4px; /* Arrondit les coins des champs */
+  margin-top: 0.5rem; /* Ajoute un petit espace entre le label et le champ */
+}
+
+/* Espacement du bouton d’envoi */
+.contact-form button {
+  margin-top: 1.5rem; /* Ajoute un espace avant le bouton */
+}
+
+/* === Pied de page === */
+footer {
+  background-color: #232F3E; /* Définit un fond bleu foncé */
+  color: #fff; /* Texte en blanc */
+  text-align: center; /* Centre le texte */
+  padding: 1rem; /* Ajoute un espace intérieur de 1rem */
+  margin-top: 4rem; /* Ajoute un grand espace avant le pied de page */
+}
+
+/* === Responsive Design (Adaptation aux petits écrans) === */
+
+/* Règles pour les écrans de largeur inférieure ou égale à 768px */
+@media (max-width: 768px) {
+  /* Barre de navigation en colonne */
+  nav {
+      flex-direction: column; /* Empile les éléments verticalement */
+  }
+
+  /* Liste des liens de navigation en colonne */
+  .nav-links {
+      flex-direction: column; /* Met les liens en colonne */
+      margin-top: 1rem; /* Ajoute un espace en haut */
+  }
+
+  /* Espacement entre les liens dans la version mobile */
+  .nav-links li {
+      margin: 0.5rem 0; /* Ajoute un espace au-dessus et en dessous des liens */
+  }
+
+  /* Détails du produit en colonne */
+  .product-details {
+      flex-direction: column; /* Aligne les éléments du produit en colonne */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* === Réinitialisation des marges et paddings === */
+/* Supprime les marges et paddings par défaut et applique box-sizing pour éviter les dépassements */
+* {
+  margin: 0; /* Supprime les marges externes */
+  padding: 0; /* Supprime les espacements internes */
+  box-sizing: border-box; /* Inclut padding et border dans les dimensions des éléments */
+}
+
+/* === Conteneur du carrousel === */
+.carousel {
+  position: relative; /* Définit une position relative pour permettre un positionnement absolu des enfants */
+  width: 100%; /* Utilise toute la largeur disponible */
+  max-width: 800px; /* Limite la largeur maximale à 800px */
+  height: 450px; /* Définit une hauteur fixe */
+  max-height: 450px; /* Empêche la hauteur de dépasser 450px */
+  margin: 40px auto; /* Centre le carrousel horizontalement avec une marge de 40px en haut et en bas */
+  overflow: hidden; /* Cache tout contenu débordant du conteneur */
+}
+
+/* === Cacher les boutons radio utilisés pour la navigation des diapositives === */
+.carousel input {
+  display: none; /* Masque complètement les boutons radio */
+}
+
+/* === Conteneur des diapositives === */
+.slides {
+  position: relative; /* Position relative pour que les diapositives puissent être positionnées absolument */
+  width: 100%; /* Utilise toute la largeur du carrousel */
+  height: 100%; /* Utilise toute la hauteur du carrousel */
+}
+
+/* === Style de chaque diapositive === */
+.slide {
+  position: absolute; /* Position absolue pour permettre leur superposition */
+  width: 100%; /* Occupe toute la largeur du carrousel */
+  height: 100%; /* Occupe toute la hauteur du carrousel */
+  opacity: 0; /* Rend la diapositive invisible par défaut */
+  transition: opacity 1s ease-in-out; /* Ajoute une transition fluide de 1s lors du changement d'opacité */
+}
+
+/* === Style des images des diapositives === */
+.slide img {
+  width: 100%; /* L'image occupe toute la largeur disponible */
+  height: 100%; /* L'image occupe toute la hauteur disponible */
+  object-fit: cover; /* Ajuste l'image pour couvrir toute la zone sans déformation */
+  display: block; /* Supprime tout espace blanc sous l'image */
+}
+
+/* === Animation des diapositives (cycle automatique) === */
+@keyframes autoCycle {
+  0%, 25% { opacity: 1; z-index: 1; } /* La diapositive est visible pendant 25% du cycle */
+  30%, 100% { opacity: 0; z-index: 0; } /* La diapositive devient invisible après 30% */
+}
+
+/* === Définition des animations pour chaque diapositive === */
+.s1 { animation: autoCycle 16s infinite 0s; } /* Première diapositive commence immédiatement */
+.s2 { animation: autoCycle 16s infinite 4s; } /* Seconde diapositive commence après 4s */
+.s3 { animation: autoCycle 16s infinite 8s; } /* Troisième diapositive commence après 8s */
+.s4 { animation: autoCycle 16s infinite 12s; } /* Quatrième diapositive commence après 12s */
+
+/* === Activation des diapositives via les boutons radio === */
+/* Lorsque le bouton radio correspondant est sélectionné, la diapositive associée devient visible */
+#slide1:checked ~ .slides .s1,
+#slide2:checked ~ .slides .s2,
+#slide3:checked ~ .slides .s3,
+#slide4:checked ~ .slides .s4 {
+  opacity: 1; /* Rend la diapositive visible */
+  z-index: 2; /* Place la diapositive au-dessus des autres */
+  animation: none; /* Désactive l'animation automatique si l'utilisateur sélectionne une diapositive */
+}
+
+/* === Navigation entre les diapositives === */
+.nav {
+  position: absolute; /* Position absolue pour flotter sur les images */
+  top: 50%; /* Place la navigation au milieu verticalement */
+  width: 100%; /* Prend toute la largeur du carrousel */
+  transform: translateY(-50%); /* Ajuste la position pour un alignement précis */
+  display: flex; /* Utilise Flexbox pour aligner les boutons */
+  justify-content: space-between; /* Place les boutons aux extrémités */
+  pointer-events: none; /* Empêche les interactions accidentelles en dehors des boutons */
+}
+
+/* === Boutons de navigation (flèches gauche et droite) === */
+.nav label {
+  pointer-events: all; /* Active les interactions sur les boutons */
+  background: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent */
+  color: #fff; /* Définit la couleur du texte en blanc */
+  font-size: 2em; /* Définit une taille de police grande pour les boutons */
+  padding: 10px; /* Ajoute un espace intérieur autour des boutons */
+  cursor: pointer; /* Change le curseur en "main" pour indiquer qu’il est cliquable */
+  user-select: none; /* Empêche la sélection du texte sur les boutons */
+  transition: background 0.3s; /* Ajoute une transition fluide sur le changement de fond */
+}
+
+/* === Effet au survol des boutons de navigation === */
+.nav label:hover {
+  background: rgba(0, 0, 0, 0.7); /* Assombrit le fond des boutons au survol */
+}
+
+/* === Ajustements pour les écrans mobiles (Responsive Design) === */
+
+/* Pour les écrans de largeur inférieure ou égale à 768px */
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 40vh; /* Ajuste la hauteur du carrousel en fonction de la hauteur de l'écran */
+  }
+  
+  .nav label {
+    font-size: 1.5em; /* Réduit la taille du texte des boutons de navigation */
+    padding: 5px; /* Réduit l’espace autour des boutons */
+  }
+}
+
+/* Pour les écrans de largeur inférieure ou égale à 480px */
+@media screen and (max-width: 480px) {
+  .carousel {
+    height: 35vh; /* Réduit encore la hauteur du carrousel */
+  }
+  
+  .nav label {
+    font-size: 1.2em; /* Diminue davantage la taille des boutons de navigation */
+    padding: 5px; /* Réduit encore l’espace autour des boutons */
+  }
+}
+
+
+
+/* ---------------------------------------------------
+   Ajout d'un bouton retour en haut
+--------------------------------------------------- */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007acc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#scroll-to-top:hover {
+  background-color: #005f99;
+}

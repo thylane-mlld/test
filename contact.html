@@ -1,0 +1,75 @@
+<!-- Déclaration du type de document -->
+<!DOCTYPE html>
+<!-- Début du document HTML avec la langue définie en français -->
+<html lang="fr">
+<head>
+  <!-- Définition du jeu de caractères -->
+  <meta charset="UTF-8">
+  <!-- Configuration de l'affichage pour les appareils mobiles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titre de la page -->
+  <title>Contact - Bijoux Précieux</title>
+  <!-- Description de la page pour les moteurs de recherche -->
+  <meta name="description" content="Contactez-nous pour toute demande ou renseignement sur notre collection de bijoux.">
+  <!-- Lien vers la feuille de style externe -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Début de l'en-tête -->
+  <header>
+    <!-- Début de la navigation -->
+    <nav>
+      <!-- Logo du site avec un lien vers la page d'accueil -->
+      <div class="logo">
+        <a href="index.html">Bijoux Précieux</a>
+      </div>
+      <!-- Liste des liens de navigation -->
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="products.html">Produits</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <!-- Barre de recherche -->
+      <div class="search">
+        <input type="text" placeholder="Rechercher...">
+        <button>OK</button>
+      </div>
+      <!-- Section du panier -->
+      <div class="header">
+        <div class="cart"><a href="" class="cart">🛒Mon panier</a> </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Début du contenu principal -->
+  <main>
+    <!-- Section du formulaire de contact -->
+    <section class="contact-form">
+      <h1>Contactez-nous</h1>
+      <!-- Début du formulaire -->
+      <form action="#" method="post">
+        <!-- Champ pour le nom -->
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+        
+        <!-- Champ pour l'email -->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <!-- Champ pour le message -->
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <!-- Bouton pour envoyer le formulaire -->
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Début du pied de page -->
+  <footer>
+    <p>&copy; 2025 Bijoux Précieux. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
